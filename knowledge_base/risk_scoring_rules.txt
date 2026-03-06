@@ -1,0 +1,19 @@
+Risk Scoring Guidelines
+
+Base risk score: 0
+
+Add 2 points:
+- If event happens at night.
+- If lighting is low.
+
+Add 3 points:
+- If sudden fall detected.
+- If aggressive body posture detected.
+
+Add 2 points:
+- If crowd count is greater than 2.
+
+Risk Levels:
+0–2 → Low
+3–5 → Medium
+6+ → High

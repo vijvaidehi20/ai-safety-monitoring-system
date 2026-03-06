@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+venv311/
+
+# OS files
+.DS_Store
+
+# Logs
+logs/*.json
+
+# Incidents images
+incidents/
+
+# Database
+chroma_db/
+
+# Model weights
+*.pt
+
+# Streamlit cache
+.streamlit/
+
+# Env variables
+.env

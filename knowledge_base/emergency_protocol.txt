@@ -1,0 +1,13 @@
+Emergency Response Protocol
+
+1. For high-risk incidents:
+   - Notify police immediately.
+   - Share exact timestamp and location.
+   - Send captured frame image.
+   - Trigger public safety announcement.
+
+2. For medium-risk incidents:
+   - Monitor for 30 seconds.
+   - If suspicious movement continues, escalate.
+
+3. If the detected person gets up and walks normally, mark event as low risk.

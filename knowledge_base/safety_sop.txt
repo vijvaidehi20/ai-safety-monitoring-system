@@ -1,0 +1,13 @@
+Women Safety Monitoring Standard Operating Procedure (SOP)
+
+1. If a woman is detected falling suddenly in a public place, the system must first assess whether it is an accidental fall or a potential assault.
+
+2. If the incident occurs during night hours (8 PM – 5 AM), risk level increases.
+
+3. If the area is poorly lit, the risk score increases.
+
+4. If more than one unidentified person is standing close to the victim within 2 meters, escalate to medium or high risk.
+
+5. For high-risk events, notify nearby authorities immediately and activate public announcement system.
+
+6. For medium-risk events, issue warning announcement before escalation.
