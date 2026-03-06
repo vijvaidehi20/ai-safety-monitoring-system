@@ -54,27 +54,6 @@ RAG Reasoning → Risk Level → Alert → Incident Log → Dashboard
 
 ---
 
-## 📂 Project Structure
-ai-safety-monitoring-system
-│
-├── app
-│ ├── agents
-│ ├── alerts
-│ ├── dashboard
-│ ├── rag
-│ ├── utils
-│ └── vision
-│
-├── chroma_db
-├── incidents
-├── logs
-│ └── incidents.json
-├── knowledge_base
-└── sounds
-
-
----
-
 ## 🚀 Running the Project
 
 ### 1️⃣ Install dependencies
@@ -103,16 +82,19 @@ The Streamlit dashboard displays:
 
 Every detected event is stored in:
 logs/incidents.json
-Example:
-{
-"incident_id": "INC_20260307_004605",
-"camera_id": "camera_1",
-"people_count": 2,
-"risk_level": "HIGH",
-"image_path": "incidents/incident_20260307_004605.jpg",
-"alert_sent": true
-}
 
+Example record:
+
+```json
+{
+  "incident_id": "INC_20260307_004605",
+  "camera_id": "camera_1",
+  "people_count": 2,
+  "risk_level": "HIGH",
+  "image_path": "incidents/incident_20260307_004605.jpg",
+  "alert_sent": true
+}
+```
 ---
 
 ## 🔍 Knowledge Base
@@ -126,3 +108,4 @@ These include safety protocols and legal references used by the RAG pipeline.
 ## 👩‍💻 Author
 
 **Vaidehi Vij**  
+
