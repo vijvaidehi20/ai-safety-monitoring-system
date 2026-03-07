@@ -7,7 +7,14 @@ from PIL import Image
 from streamlit_autorefresh import st_autorefresh
 import streamlit.components.v1 as components
 
-st_autorefresh(interval=5000, key="monitor_refresh")
+# st_autorefresh(interval=5000, key="monitor_refresh")
+
+# control refresh behaviour
+if "pause_refresh" not in st.session_state:
+    st.session_state.pause_refresh = False
+
+if not st.session_state.pause_refresh:
+    st_autorefresh(interval=5000, key="monitor_refresh")
 
 LOG_FILE = "logs/incidents.json"
 
@@ -201,6 +208,10 @@ def show_incident_details(inc):
         st.write(f"**Alert Trigger Time:** {inc['alert_trigger_time']}")
         st.write(f"**Response Time:** {inc['response_time_sec']} sec")
 
+    if st.button("Close"):
+        st.session_state.pause_refresh = False
+        st.rerun()
+
 # -----------------------------
 # TABS
 # -----------------------------
@@ -307,7 +318,10 @@ with tab1:
                 """
             )
 
+            # if col2.button("View Details", key=inc["incident_id"]):
+            #     show_incident_details(inc)
             if col2.button("View Details", key=inc["incident_id"]):
+                st.session_state.pause_refresh = True
                 show_incident_details(inc)
 
             st.divider()

@@ -7,6 +7,7 @@ import time
 from utils.logger import log_incident, generate_incident_id
 import os
 from utils.logger import update_alert_status
+from rag.pipeline import run_rag
 
 os.makedirs("incidents", exist_ok=True)
 
@@ -148,33 +149,6 @@ def run_camera_detection():
                 2
             )
 
-        # cv2.putText(frame, "AI SAFETY PANEL", (20,40),
-        #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,255), 2)
-        
-        # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-        # cv2.putText(
-        #     frame,
-        #     f"Time: {current_time}",
-        #     (20, 90),                # position
-        #     cv2.FONT_HERSHEY_SIMPLEX,
-        #     0.7,
-        #     (255, 255, 255),
-        #     2
-        # )
-
-        # cv2.putText(frame, f"People: {people_count}", (20,130),
-        #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2)
-
-        # cv2.putText(frame, f"Gesture: {gesture_detected}", (20,170),
-        #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,255), 2)
-
-        # cv2.putText(frame, f"Lighting: {lighting}", (20,210),
-        #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,0), 2)
-
-        # cv2.putText(frame, f"Risk: {risk_level}", (20,250),
-        #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,165,255), 2)
-
         # ---------------- DRAW INFO PANEL ----------------
 
         overlay = frame.copy()
@@ -242,6 +216,22 @@ def run_camera_detection():
                 "longitude": 76.7794
             }
 
+            # Build query for RAG
+            query = f"""
+            Potential emergency detected.
+
+            Lighting: {lighting}
+            People detected: {people_count}
+            Gesture detected: {gesture_detected}
+            Fall detected: {fall_detected}
+
+            Assess risk and recommend action.
+            """
+
+            rag_result = run_rag(query)
+
+            rag_reasoning = rag_result["LLM Explanation"]
+
             # Save incident frame
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"incident_{timestamp}.jpg"
@@ -269,7 +259,7 @@ def run_camera_detection():
                 "risk_level": risk_level,
                 "confidence": 1.0,  # placeholder (can later use YOLO confidence)
                 "image_path": filepath,
-                "rag_reasoning": "Gesture/Fall detection triggered safety protocol",
+                "rag_reasoning": rag_reasoning,
                 "alert_sent": False,
                 "alert_method": None,
                 "alert_trigger_time": None,
