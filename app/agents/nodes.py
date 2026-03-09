@@ -4,6 +4,7 @@ from rag.hyde_retriever import get_hyde_results
 from alerts.alert_system import trigger_alert
 from utils.logger import update_alert_status
 from utils.logger import update_alert_failure
+from rag.risk_engine import calculate_risk
 
 from .state import GraphState
 
@@ -28,16 +29,7 @@ def risk_node(state: GraphState):
 
     event_data = state["event_data"]
 
-    risk_result = {
-        "level": "High",
-        "score": 10,
-        "breakdown": {
-            "night": True,
-            "lighting": "low",
-            "fall": True,
-            "crowd": True
-        }
-    }
+    risk_result = calculate_risk(event_data)
 
     return {"risk_result": risk_result}
 
@@ -53,30 +45,32 @@ def explanation_node(state: GraphState):
     event_data = state["event_data"]
 
     prompt = f"""
-You are a technical AI safety monitoring system.
+    You are a technical AI safety monitoring system.
 
-Do not use conversational phrases.
-Be formal and concise.
+    Do not use conversational phrases.
+    Be formal and concise.
 
-Context:
-{context}
+    Context:
+    {context}
 
-Scenario:
-{state['query']}
+    Scenario:
+    {state['query']}
 
-Location:
-Latitude: {event_data['latitude']}
-Longitude: {event_data['longitude']}
+    Location:
+    Latitude: {event_data['latitude']}
+    Longitude: {event_data['longitude']}
 
-Risk Level: {risk_result['level']}
-Risk Score: {risk_result['score']}
-Breakdown: {risk_result['breakdown']}
+    Risk Level: {risk_result['level']}
+    Risk Score: {risk_result['score']}
+    Breakdown: {risk_result['breakdown']}
 
-Explain why this risk assessment is correct.
-Provide recommended actions.
-"""
+    Explain why this risk assessment is correct.
+    Provide recommended actions.
+    """
 
     response = llm.invoke(prompt)
+
+    # explanation = f"Risk assessment is based on deterministic rules. Level: {risk_result['level']}, Score: {risk_result['score']}, Breakdown: {risk_result['breakdown']}. Recommended: Monitor situation."
 
     return {"explanation": response.content}
 
@@ -84,31 +78,12 @@ Provide recommended actions.
 # ---- Router ----
 def risk_router(state: GraphState):
 
-    level = state["risk_result"]["level"]
+    level = state["risk_result"]["level"].strip().lower()
 
-    if level == "High":
+    if level in ["medium", "high"]:
         return "alert"
 
     return "explanation"
-
-
-# import threading
-
-# ---- Alert Node ----
-# def alert_node(state: GraphState):
-
-#     risk_result = state["risk_result"]
-#     event_data = state["event_data"]
-
-#     # threading.Thread(
-#     #     target=trigger_alert,
-#     #     args=(risk_result, event_data),
-#     #     daemon=True
-#     # ).start()
-
-#     alert_status = trigger_alert(risk_result, event_data)
-
-#     return {"alert": alert_status}
 
 # ---- Alert Node ----
 def alert_node(state: GraphState):

@@ -1,0 +1,13 @@
+Suspicious Behavior Detection Guidelines
+
+Certain behavioral patterns may indicate a potential safety risk.
+
+Indicators of suspicious activity include:
+- A person suddenly falling or collapsing.
+- Rapid or repeated distress gestures.
+- A group of individuals surrounding a single person.
+- Aggressive body posture such as raised arms or pushing motions.
+
+If suspicious behavior occurs in combination with environmental risk factors such as poor lighting or low crowd density, the overall risk level increases.
+
+Repeated distress gestures within a short time frame should be treated as potential calls for help.

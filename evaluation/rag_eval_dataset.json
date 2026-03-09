@@ -1,0 +1,42 @@
+[
+  {
+    "query": "Woman falls at night in poorly lit street",
+    "relevant_docs": ["safety_sop.txt", "emergency_protocol.txt", "risk_scoring_rules.txt"]
+  },
+  {
+    "query": "Suspicious gesture detected in public place",
+    "relevant_docs": ["safety_sop.txt", "behavior_patterns.txt"]
+  },
+  {
+    "query": "Emergency response after assault",
+    "relevant_docs": ["legal_references.txt", "emergency_protocol.txt"]
+  },
+  {
+    "query": "How lighting conditions affect safety risk",
+    "relevant_docs": ["environmental_context.txt", "risk_scoring_rules.txt"]
+  },
+  {
+    "query": "How does crowd behavior increase safety risk in public safety monitoring? ",
+    "relevant_docs": ["crowd_dynamics.txt", "risk_scoring_rules.txt"]
+  },
+  {
+    "query": "Woman falls at night with multiple people nearby",
+    "relevant_docs": ["safety_sop.txt", "risk_scoring_rules.txt", "behavior_patterns.txt"]
+  },
+  {
+    "query": "Legal protections for women harassment in India",
+    "relevant_docs": ["legal_references.txt"]
+  },
+  {
+    "query": "Emergency protocol when a high risk incident occurs",
+    "relevant_docs": ["emergency_protocol.txt"]
+  },
+  {
+    "query": "Example of high risk scenario in public safety monitoring",
+    "relevant_docs": ["scenario_examples.txt"]
+  },
+  {
+    "query": "How environmental conditions affect incident risk evaluation",
+    "relevant_docs": ["environmental_context.txt"]
+  }
+]

@@ -13,6 +13,11 @@ def calculate_risk(event_data: dict):
     else:
         breakdown["Night"] = 0
 
+    # gesture
+    if event_data.get("gesture_detected"):
+        score += 3
+        breakdown["Gesture"] = 3
+
     # Lighting check
     if event_data.get("lighting") == "low":
         score += 2

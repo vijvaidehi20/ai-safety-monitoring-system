@@ -1,0 +1,11 @@
+Environmental Risk Factors in Public Safety Monitoring
+
+Environmental conditions play a critical role in assessing safety risks.
+
+Low lighting conditions reduce visibility and increase vulnerability to potential incidents.
+
+Incidents occurring during late night hours should be prioritized due to reduced public presence and slower response times.
+
+Locations with low crowd density may increase vulnerability for individuals, especially if suspicious activity is detected nearby.
+
+Environmental context should always be combined with behavioral signals to determine risk levels.

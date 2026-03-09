@@ -1,0 +1,9 @@
+Crowd Behavior Analysis
+
+Crowd dynamics provide important indicators for potential safety incidents.
+
+If multiple individuals are detected surrounding a single person, the system should increase the risk level.
+
+Close proximity interactions between individuals combined with aggressive gestures may indicate harassment or assault.
+
+In contrast, if the detected person is surrounded by others but normal movement patterns are observed, the risk may remain moderate.

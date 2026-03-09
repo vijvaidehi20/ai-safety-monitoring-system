@@ -285,9 +285,61 @@ with tab1:
             unsafe_allow_html=True
         )
         
+    # st.divider()
+
+    # # -----------------------------
+    # # AI DECISION ENGINE PANEL
+    # # -----------------------------
+
+    # st.subheader("🧠 AI Safety Reasoning Engine")
+
+    # if incidents:
+
+    #     latest_incident = incidents[0]
+
+    #     risk = latest_incident["risk_level"]
+    #     reasoning = latest_incident["rag_reasoning"]
+
+    #     # risk color
+    #     if risk == "HIGH":
+    #         color = "#ff4b4b"
+    #     elif risk == "MEDIUM":
+    #         color = "#ffa500"
+    #     else:
+    #         color = "#00ff9c"
+
+    #     st.markdown(
+    #         f"""
+    #         <div style="
+    #             background:#0f172a;
+    #             padding:25px;
+    #             border-radius:12px;
+    #             border-left:6px solid {color};
+    #             margin-bottom:20px;
+    #         ">
+    #         <h3 style="color:{color}; margin-bottom:10px;">
+    #         Risk Level: {risk}
+    #         </h3>
+
+    #         <div style="
+    #             background:#020617;
+    #             padding:15px;
+    #             border-radius:8px;
+    #             font-size:15px;
+    #             line-height:1.6;
+    #         ">
+    #         {reasoning}
+    #         </div>
+    #         </div>
+    #         """,
+    #         unsafe_allow_html=True
+    #     )
+
+    # else:
+    #     st.info("No AI reasoning available yet.")
+    # -----------------------------
     st.divider()
         
-        # -----------------------------
     st.subheader("Recent Incidents")
 
     if incidents:

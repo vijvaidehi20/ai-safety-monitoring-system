@@ -11,3 +11,5 @@ Women Safety Monitoring Standard Operating Procedure (SOP)
 5. For high-risk events, notify nearby authorities immediately and activate public announcement system.
 
 6. For medium-risk events, issue warning announcement before escalation.
+
+Risk evaluation should combine behavioral observations, environmental context, and crowd presence to determine the most appropriate response level.

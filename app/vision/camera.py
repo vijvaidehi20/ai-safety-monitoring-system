@@ -51,6 +51,9 @@ def draw_panel_text(frame, text, position, color=(255,255,255), scale=0.6):
     cv2.putText(frame, text, (x,y),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 scale, color, 2)
+    
+# previous_risk_level = "LOW"
+# alert_sent_for_event = False
 
 def run_camera_detection():
 
@@ -202,6 +205,8 @@ def run_camera_detection():
         if key == ord('f'):
             fall_detected = True
             print("Fall event triggered")
+        
+        # previous_risk_level = risk_level
 
         if key == ord('q'):
             current_time = datetime.now().hour
@@ -277,7 +282,3 @@ def run_camera_detection():
             cv2.destroyAllWindows()
 
             return event_data
-        
-    
-
-

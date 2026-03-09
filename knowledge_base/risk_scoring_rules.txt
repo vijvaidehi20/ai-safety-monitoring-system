@@ -2,18 +2,33 @@ Risk Scoring Guidelines
 
 Base risk score: 0
 
+Environmental Risk Factors
 Add 2 points:
-- If event happens at night.
-- If lighting is low.
+- If event happens during night hours (20:00–05:00)
+- If lighting conditions are low or visibility is poor
 
+Behavioral Risk Factors
 Add 3 points:
-- If sudden fall detected.
-- If aggressive body posture detected.
+- If sudden fall or collapse is detected
+- If aggressive body posture or threatening gestures are detected
 
+Crowd Dynamics
 Add 2 points:
-- If crowd count is greater than 2.
+- If crowd count is greater than 2 within a 2–3 meter radius
 
-Risk Levels:
-0–2 → Low
-3–5 → Medium
-6+ → High
+Add 3 additional points:
+- If crowd is surrounding a single individual
+
+Situational Escalation
+Add 2 points:
+- If the detected person shows repeated distress gestures
+- If the incident continues for more than 10 seconds
+
+Risk Levels
+0–2 → LOW (Normal activity)
+3–5 → MEDIUM (Suspicious situation)
+6–8 → HIGH (Potential safety threat)
+9+ → CRITICAL (Immediate intervention required)
+
+Important Reasoning Rule:
+Risk assessment should consider behavioral signals, environmental conditions, and crowd dynamics together rather than evaluating them independently.

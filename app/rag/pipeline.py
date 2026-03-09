@@ -4,6 +4,7 @@ from rag.multiquery_retriever import get_multiquery_results
 from rag.hyde_retriever import get_hyde_results
 
 def run_rag(query: str):
+# def run_rag(query: str, event_data: dict):
 
     # Simulated event metadata (later this comes from OpenCV)
     event_data = {
@@ -41,23 +42,23 @@ def run_rag(query: str):
     llm = ChatOllama(model="llama3")
 
     prompt = f"""
-You are an AI safety assistant.
+    You are an AI safety assistant.
 
-Context:
-{context}
+    Context:
+    {context}
 
-Scenario:
-{query}
+    Scenario:
+    {query}
 
-The system has already calculated:
+    The system has already calculated:
 
-Risk Level: {risk_result['level']}
-Risk Score: {risk_result['score']}
-Breakdown: {risk_result['breakdown']}
+    Risk Level: {risk_result['level']}
+    Risk Score: {risk_result['score']}
+    Breakdown: {risk_result['breakdown']}
 
-Explain clearly why this risk level is appropriate.
-Then provide recommended actions.
-"""
+    Explain clearly why this risk level is appropriate.
+    Then provide recommended actions.
+    """
 
     explanation = llm.invoke(prompt)
 

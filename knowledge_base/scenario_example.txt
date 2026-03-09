@@ -1,0 +1,41 @@
+Example Safety Scenarios
+
+Scenario 1:
+A woman suddenly falls in a poorly lit street at 11:30 PM while two individuals are standing nearby.
+Risk Level: HIGH
+Reason: Night-time environment, low lighting, and sudden fall increase potential safety risk.
+
+Scenario 2:
+A woman is walking normally in a well-lit public area with several people nearby.
+Risk Level: LOW
+Reason: Normal behavior patterns and safe environmental conditions.
+
+Scenario 3:
+A person repeatedly gestures for help while standing alone in a dark area.
+Risk Level: HIGH
+Reason: Distress gestures combined with low visibility indicate potential danger.
+
+Scenario 4:
+A group of three individuals surrounds a single person and aggressive gestures are detected.
+Risk Level: CRITICAL
+Reason: Crowd dynamics and aggressive behavior indicate possible harassment or assault.
+
+Scenario 5:
+A person briefly stumbles but quickly stands up and continues walking normally.
+Risk Level: LOW
+Reason: Temporary loss of balance without additional suspicious activity.
+
+
+Example Safety Scenarios for AI Monitoring
+
+LOW Risk Scenario:
+A person briefly stumbles while walking but immediately regains balance and continues normally. The area is well lit and other people are nearby behaving normally.
+
+MEDIUM Risk Scenario:
+A person appears confused or repeatedly gestures for help in a moderately crowded area but no aggressive behavior is detected.
+
+HIGH Risk Scenario:
+A woman suddenly falls in a poorly lit street at night while two individuals are standing nearby. The situation requires immediate monitoring and possible escalation.
+
+CRITICAL Risk Scenario:
+A group of individuals surrounds a single person while aggressive gestures are detected in a dark area at night. This situation may indicate harassment or assault and requires immediate intervention.
