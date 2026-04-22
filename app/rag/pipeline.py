@@ -2,6 +2,7 @@ from langchain_ollama import ChatOllama
 from rag.risk_engine import calculate_risk
 from rag.multiquery_retriever import get_multiquery_results
 from rag.hyde_retriever import get_hyde_results
+from evaluation.evaluate_rag import run_ragas
 
 def run_rag(query: str):
 # def run_rag(query: str, event_data: dict):
@@ -62,9 +63,17 @@ def run_rag(query: str):
 
     explanation = llm.invoke(prompt)
 
+    ragas_result = run_ragas(
+        question=query,
+        contexts=context_list,
+        answer=explanation.content,
+        ground_truth="Correct safety assessment for the scenario"
+    )
+
     return {
         "Risk Level": risk_result["level"],
         "Risk Score": risk_result["score"],
         "Breakdown": risk_result["breakdown"],
-        "LLM Explanation": explanation.content
+        "LLM Explanation": explanation.content,
+        "RAGAS Evaluation": ragas_result
     }

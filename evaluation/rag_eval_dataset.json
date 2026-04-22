@@ -1,42 +1,201 @@
 [
-  {
-    "query": "Woman falls at night in poorly lit street",
-    "relevant_docs": ["safety_sop.txt", "emergency_protocol.txt", "risk_scoring_rules.txt"]
-  },
-  {
-    "query": "Suspicious gesture detected in public place",
-    "relevant_docs": ["safety_sop.txt", "behavior_patterns.txt"]
-  },
-  {
-    "query": "Emergency response after assault",
-    "relevant_docs": ["legal_references.txt", "emergency_protocol.txt"]
-  },
-  {
-    "query": "How lighting conditions affect safety risk",
-    "relevant_docs": ["environmental_context.txt", "risk_scoring_rules.txt"]
-  },
-  {
-    "query": "How does crowd behavior increase safety risk in public safety monitoring? ",
-    "relevant_docs": ["crowd_dynamics.txt", "risk_scoring_rules.txt"]
-  },
-  {
-    "query": "Woman falls at night with multiple people nearby",
-    "relevant_docs": ["safety_sop.txt", "risk_scoring_rules.txt", "behavior_patterns.txt"]
-  },
-  {
-    "query": "Legal protections for women harassment in India",
-    "relevant_docs": ["legal_references.txt"]
-  },
-  {
-    "query": "Emergency protocol when a high risk incident occurs",
-    "relevant_docs": ["emergency_protocol.txt"]
-  },
-  {
-    "query": "Example of high risk scenario in public safety monitoring",
-    "relevant_docs": ["scenario_examples.txt"]
-  },
-  {
-    "query": "How environmental conditions affect incident risk evaluation",
-    "relevant_docs": ["environmental_context.txt"]
-  }
+{
+"question": "What suspicious activity occurred near the main entrance?",
+"contexts": [
+"Camera detected a person loitering near the entrance for over 10 minutes during nighttime.",
+"Lighting conditions were low and pedestrian traffic was minimal."
+],
+"answer": "A person was loitering near the entrance for an extended period during nighttime, which indicates suspicious behavior.",
+"ground_truth": "Suspicious loitering near the entrance during nighttime."
+},
+
+{
+"question": "What safety risk is present in the parking area?",
+"contexts": [
+"Camera 4 detected a person lying on the ground in the parking lot.",
+"Fall detection system triggered an alert."
+],
+"answer": "The system detected a fall in the parking area indicating a potential medical or safety emergency.",
+"ground_truth": "Fall detected in the parking area indicating possible injury."
+},
+
+{
+"question": "What unusual activity was observed near gate 2?",
+"contexts": [
+"Camera recorded a person repeatedly approaching and leaving gate 2.",
+"The person stayed near the gate for several minutes."
+],
+"answer": "Repeated presence near gate 2 suggests suspicious surveillance or loitering behavior.",
+"ground_truth": "Suspicious loitering or surveillance near gate 2."
+},
+
+{
+"question": "What crowd-related risk was detected?",
+"contexts": [
+"People count exceeded 25 in a restricted corridor.",
+"Crowd density threshold exceeded safety limit."
+],
+"answer": "A high crowd density was detected in a restricted corridor which may pose safety and evacuation risks.",
+"ground_truth": "Overcrowding detected in restricted corridor."
+},
+
+{
+"question": "Why is the environment considered risky in this scenario?",
+"contexts": [
+"Low lighting detected during night hours.",
+"A person was detected running in a restricted area."
+],
+"answer": "Low lighting combined with unusual movement in a restricted area increases the risk of unsafe or suspicious activity.",
+"ground_truth": "Suspicious activity in poorly lit restricted area."
+},
+
+{
+"question": "What security issue occurred near the emergency exit?",
+"contexts": [
+"Camera detected a person blocking the emergency exit door.",
+"Emergency exits must remain unobstructed according to safety SOP."
+],
+"answer": "A person blocking the emergency exit creates a safety hazard because exits must remain clear.",
+"ground_truth": "Emergency exit obstruction detected."
+},
+
+{
+"question": "What abnormal behavior was detected in the lobby?",
+"contexts": [
+"A person was pacing repeatedly in the lobby area.",
+"Duration of presence exceeded typical visitor time."
+],
+"answer": "Repeated pacing and prolonged presence in the lobby indicates unusual or suspicious behavior.",
+"ground_truth": "Suspicious prolonged activity in lobby."
+},
+
+{
+"question": "What incident occurred near the staircase?",
+"contexts": [
+"Camera detected a person slipping near the staircase.",
+"Fall detection triggered."
+],
+"answer": "A person slipped near the staircase which indicates a possible injury incident.",
+"ground_truth": "Fall detected near staircase."
+},
+
+{
+"question": "What security concern was detected near the building perimeter?",
+"contexts": [
+"Motion detected near the restricted perimeter zone at night.",
+"No authorized personnel scheduled in that area."
+],
+"answer": "Movement near the restricted perimeter zone during night hours indicates possible unauthorized access.",
+"ground_truth": "Unauthorized movement near restricted perimeter."
+},
+
+{
+"question": "Why was an alert triggered in the corridor?",
+"contexts": [
+"Multiple individuals running in the corridor.",
+"Rapid movement detected by behavior monitoring system."
+],
+"answer": "Rapid running in the corridor may indicate panic, emergency, or unsafe behavior triggering an alert.",
+"ground_truth": "Unusual rapid movement detected in corridor."
+},
+
+{
+"question": "What potential risk occurred in the hallway?",
+"contexts": [
+"A person was seen lying on the hallway floor.",
+"No movement detected for several seconds."
+],
+"answer": "A person lying motionless in the hallway suggests a possible medical emergency or fall.",
+"ground_truth": "Possible medical emergency detected in hallway."
+},
+
+{
+"question": "What activity occurred near the loading dock?",
+"contexts": [
+"Person detected near loading dock outside scheduled delivery hours.",
+"Area normally restricted during nighttime."
+],
+"answer": "Presence near the loading dock during restricted hours indicates suspicious activity.",
+"ground_truth": "Unauthorized presence near loading dock."
+},
+
+{
+"question": "What behavior triggered a risk alert near the entrance?",
+"contexts": [
+"A person attempted to open a locked access door repeatedly.",
+"Access control logs show failed attempts."
+],
+"answer": "Repeated attempts to open a locked door indicate a potential unauthorized access attempt.",
+"ground_truth": "Unauthorized access attempt detected."
+},
+
+{
+"question": "What crowd behavior was detected in the lobby?",
+"contexts": [
+"Group of individuals gathered in a restricted zone of the lobby.",
+"Security rules prohibit gatherings in that zone."
+],
+"answer": "Gathering in a restricted lobby area violates safety guidelines and can create security risks.",
+"ground_truth": "Unauthorized gathering in restricted area."
+},
+
+{
+"question": "Why was the risk level considered high in the parking area?",
+"contexts": [
+"A person was detected lying on the ground.",
+"Lighting conditions were poor and no movement detected."
+],
+"answer": "A fall detected in a poorly lit parking area increases the severity of the safety risk.",
+"ground_truth": "Fall detected in low-light parking area."
+},
+
+{
+"question": "What suspicious movement occurred near the side entrance?",
+"contexts": [
+"A person approached the side entrance multiple times without entering.",
+"Camera tracking shows repeated pacing."
+],
+"answer": "Repeated pacing near the side entrance indicates suspicious surveillance behavior.",
+"ground_truth": "Suspicious surveillance near side entrance."
+},
+
+{
+"question": "What environmental risk was detected?",
+"contexts": [
+"Heavy rain conditions reported.",
+"Camera detected slippery surface near entrance."
+],
+"answer": "Slippery surfaces caused by rain increase the likelihood of slip-and-fall incidents.",
+"ground_truth": "Slip hazard due to wet surface."
+},
+
+{
+"question": "Why did the system mark the situation as moderate risk?",
+"contexts": [
+"Three individuals standing in a dimly lit corridor.",
+"No immediate threat detected but environment considered unsafe."
+],
+"answer": "Multiple people present in a poorly lit corridor increases potential safety concerns.",
+"ground_truth": "Potential safety risk in poorly lit corridor."
+},
+
+{
+"question": "What triggered the safety monitoring system?",
+"contexts": [
+"A person collapsed near the building entrance.",
+"Fall detection algorithm flagged the event."
+],
+"answer": "The system detected a person collapsing near the entrance indicating a possible medical emergency.",
+"ground_truth": "Person collapse detected near entrance."
+},
+
+{
+"question": "What unusual event occurred near the restricted storage room?",
+"contexts": [
+"Camera detected a person attempting to open a restricted storage door.",
+"No authorized access recorded."
+],
+"answer": "Attempting to open a restricted storage door without authorization indicates a security risk.",
+"ground_truth": "Unauthorized access attempt to restricted storage room."
+}
 ]
